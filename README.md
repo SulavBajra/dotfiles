@@ -1,8 +1,8 @@
-# 🎨 Dotfiles
+# Dotfiles
 
 My personal configuration files for a Niri wayland window manager setup on Linux.
 
-## 📋 Requirements
+## Requirements
 
 ### Window Manager & Core
 - **[Niri](https://niri-wm.github.io/niri/)** - Wayland window manager
@@ -14,7 +14,7 @@ My personal configuration files for a Niri wayland window manager setup on Linux
 - **Dolphin** - File manager
 - **Blueman** - Bluetooth support
 
-## 🚀 Setup
+## Setup
 
 ### Installation
 
@@ -28,12 +28,12 @@ git clone https://github.com/SulavBajra/dotfiles ~/.config/dotfiles
 - **Ghostty** - Terminal emulator
 - **Brave Browser** - Web browser
 
-## 🎨 Theme & Font
+##  Theme & Font
 
 - **Theme:** Tokyo Night Dark
 - **Font:** JetBrainsMono Nerd Font
 
-## ⌨️ Keybinds
+## Keybinds
 
 ### Workspace Management
 | Keybind | Action |
@@ -50,14 +50,14 @@ git clone https://github.com/SulavBajra/dotfiles ~/.config/dotfiles
 | <kbd>Super</kbd> + <kbd>B</kbd> | Browser |
 | <kbd>Super</kbd> + <kbd>E</kbd> | File manager |
 
-## 📦 Useful Commands
+## Useful Commands
 
 ```bash
 niri validate     # Validate Niri configuration
 pokemon           # Display random Pokémon
 ```
 
-## 📸 Preview
+## Preview
 
 ![Niri Dotfiles Setup](Image/Screenshot%20from%202026-06-13%2022-21-32.png)
 
