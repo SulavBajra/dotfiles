@@ -45,3 +45,8 @@ git clone https://github.com/SulavBajra/dotfiles ~/.config/dotfiles
 - **Terminal:** <kbd>Super</kbd> + <kbd>T</kbd>
 - **Browser:** <kbd>Super</kbd> + <kbd>B</kbd>
 - **File Manager:** <kbd>Super</kbd> + <kbd>E</kbd>
+
+### Commands
+
+- niri validate
+- pokemon
