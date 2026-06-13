@@ -5,14 +5,14 @@ My personal configuration files for a Niri wayland window manager setup on Linux
 ## Requirements
 
 ### Window Manager & Core
-- **Niri** - Wayland window manager
+- **Niri** - Wayland window manager https://niri-wm.github.io/niri/
 - **Waybar** - Status bar
 - **Mako** - Notification daemon
 - **Fuzzel** - Application launcher
 
 ### Applications
 - **Dolphin** - File manager
-- **Bluetooth** - Bluetooth support
+- **Blueman** - Bluetooth support
 
 ## Setup
 
@@ -38,6 +38,7 @@ git clone https://github.com/SulavBajra/dotfiles ~/.config/dotfiles
 ### Workspace Management
 - **Switch workspace:** <kbd>Super</kbd> + <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>
 - **Overview:** <kbd>Super</kbd> + <kbd>W</kbd>
+- **Application Launcher:** <kbd>Super</kbd> + <kbd>D</kbd>
 - **Move window to next workspace:** <kbd>Alt</kbd> + <kbd>Ctrl</kbd> + <kbd>←</kbd>/<kbd>→</kbd>
 
 ### Applications
