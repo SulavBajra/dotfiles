@@ -1,0 +1,196 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+    transition-duration: 0.2s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+/* ── module pill ─────────────────────────────────────────── */
+#workspaces,
+#window,
+#mpris,
+#clock,
+#cpu,
+#memory,
+#network,
+#wireplumber,
+#battery,
+#tray {
+    background-color: @module-bg;
+    color: @fg;
+    border-radius: 8px;
+    padding: 0 12px;
+    margin: 4px 3px;
+}
+
+/* ── workspaces ──────────────────────────────────────────── */
+#workspaces button {
+    background: transparent;
+    color: @inactive;
+    padding: 0 5px;
+    border-radius: 6px;
+    transition:
+        color 0.15s,
+        background 0.15s;
+}
+
+#workspaces button.active {
+    color: @highlight;
+    background: rgba(122, 162, 247, 0.12);
+}
+
+#workspaces button:hover {
+    background: rgba(122, 162, 247, 0.08);
+    color: @fg;
+}
+
+/* ── window title ────────────────────────────────────────── */
+#window {
+    color: @inactive;
+    font-style: italic;
+}
+
+/* ── mpris ───────────────────────────────────────────────── */
+#mpris {
+    color: @green;
+}
+
+#mpris.paused {
+    color: @inactive;
+}
+
+/* ── clock ───────────────────────────────────────────────── */
+#clock {
+    color: @blue;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+}
+
+/* ── system stats ────────────────────────────────────────── */
+#cpu {
+    color: @green;
+}
+
+#cpu.warning {
+    color: @yellow;
+}
+
+#cpu.critical {
+    color: @red;
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+#memory {
+    color: @blue;
+}
+
+#memory.warning {
+    color: @yellow;
+}
+
+#memory.critical {
+    color: @red;
+}
+
+/* ── network ─────────────────────────────────────────────── */
+#network {
+    color: @fg;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* ── audio ───────────────────────────────────────────────── */
+#wireplumber {
+    color: @fg;
+}
+
+#wireplumber.muted {
+    color: @inactive;
+}
+
+/* ── battery ─────────────────────────────────────────────── */
+#battery {
+    color: @green;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#bluetooth {
+    color: @blue;
+}
+
+#bluetooth.off {
+    color: @inactive;
+}
+
+#bluetooth.connected {
+    color: @green;
+}
+
+/* ── tray ────────────────────────────────────────────────── */
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(247, 118, 142, 0.15);
+}
+
+/* ── tooltips ────────────────────────────────────────────── */
+tooltip {
+    background-color: @tooltip-bg;
+    color: @fg;
+    border: 1px solid @module-bg;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+tooltip label {
+    color: @fg;
+}
+
+/* ── pulse animation for critical states ─────────────────── */
+@keyframes pulse {
+    from {
+        color: @red;
+    }
+    to {
+        color: @inactive;
+    }
+}

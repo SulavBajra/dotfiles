@@ -1,0 +1,123 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 6,
+  "ipc": true,
+  "passthrough": false,
+
+  "modules-left": ["niri/workspaces", "mpris"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "memory",
+    "network",
+    "bluetooth",
+    "wireplumber#sink",
+    "backlight",
+    "battery",
+    "tray",
+  ],
+
+  // ── left ────────────────────────────────────────────────
+  "niri/workspaces": {
+    "format": "{icon}",
+    "disable-scroll": true,
+    "active-only": false,
+    "all-outputs": true,
+    "format-icons": {
+      "active": "●",
+      "default": "○",
+    },
+  },
+
+  // "niri/window": {
+  //   "format": "{title}",
+  //   "max-length": 40,
+  // },
+
+  "mpris": {
+    "format": "󰎈 {artist} – {title}",
+    "format-paused": "󰏤 {artist} – {title}",
+    "max-length": 35,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+  },
+
+  // ── center ──────────────────────────────────────────────
+  "clock": {
+    "format": "󰃰 {:%a %d %b  %H:%M}",
+    "interval": 30,
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+    },
+  },
+
+  // ── right ───────────────────────────────────────────────
+  "memory": {
+    "format": "󰍛 {used:0.1f}G",
+    "interval": 5,
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
+    "on-click": "plasma-systemmonitor",
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 wired",
+    "format-disconnected": "󰖪 offline",
+    "tooltip-format-wifi": "{essid}  {signalStrength}%\n{ipaddr}",
+    "on-click": "ghostty -e nmtui",
+  },
+
+  "bluetooth": {
+    "format": "󰂯 {status}",
+    "format-connected": "󰂱 {device_alias}",
+    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+    "format-off": "󰂲 off",
+    "interval": 30,
+    "tooltip-format": "{controller_alias} ({controller_address})",
+    "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "  {device_alias} ({device_address})",
+    "tooltip-format-enumerate-connected-battery": "  {device_alias} ({device_address}) {device_battery_percentage}%",
+    "on-click": "blueman-manager",
+    "on-click-right": "rfkill toggle bluetooth",
+  },
+
+  "wireplumber#sink": {
+    "format": "󰕾 {volume}%",
+    "format-muted": "󰖁 muted",
+    "scroll-step": 5,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pwvucontrol",
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "scroll-step": 5,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "min-length": 6,
+  },
+
+  "battery": {
+    "interval": 10,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8,
+  },
+}

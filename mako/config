@@ -1,0 +1,40 @@
+# Tokyo Night Dark — mako
+# Place at: ~/.config/mako/config
+
+sort=-time
+layer=overlay
+anchor=top-right
+margin=12
+padding=10,14
+border-size=1
+border-radius=8
+width=320
+height=120
+max-visible=5
+default-timeout=5000
+ignore-timeout=0
+
+font=JetBrainsMono Nerd Font 12
+
+# normal
+background-color=#12121aee
+text-color=#c0caf5ff
+border-color=#7aa2f740
+progress-color=over #7aa2f720
+
+# urgency: low — muted
+[urgency=low]
+background-color=#12121acc
+text-color=#565f89ff
+border-color=#565f8940
+
+# urgency: high — red accent
+[urgency=high]
+background-color=#12121aee
+text-color=#f7768eff
+border-color=#f7768e80
+default-timeout=0
+
+# on-click / on-right-click
+on-button-left=dismiss
+on-button-right=dismiss-all
