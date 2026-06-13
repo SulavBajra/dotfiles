@@ -6,9 +6,9 @@ My personal configuration files for a Niri wayland window manager setup on Linux
 
 ### Window Manager & Core
 - **Niri** - Wayland window manager https://niri-wm.github.io/niri/
-- **Waybar** - Status bar
-- **Mako** - Notification daemon
-- **Fuzzel** - Application launcher
+- **Waybar** - Status bar https://github.com/alexays/waybar
+- **Mako** - Notification daemon https://github.com/emersion/mako
+- **Fuzzel** - Application launcher https://codeberg.org/dnkl/fuzzel
 
 ### Applications
 - **Dolphin** - File manager
