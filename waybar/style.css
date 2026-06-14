@@ -20,6 +20,14 @@ window#waybar {
     background: transparent;
 }
 
+#bluetooth,
+#network{
+    padding: 0px 5px;	
+    color: @fg;
+    border-radius: 8px;
+    background-color: @module-bg;
+}
+
 /* ── module pill ─────────────────────────────────────────── */
 #workspaces,
 #window,
@@ -27,15 +35,23 @@ window#waybar {
 #clock,
 #cpu,
 #memory,
-#network,
 #wireplumber,
 #battery,
-#tray {
+#tray,
+#custom-nightlight {
     background-color: @module-bg;
     color: @fg;
     border-radius: 8px;
     padding: 0 12px;
     margin: 4px 3px;
+}
+
+#custom-nightlight {
+    color: @inactive;
+}
+
+#custom-nightlight.on {
+    color: @yellow;
 }
 
 /* ── workspaces ──────────────────────────────────────────── */
